@@ -1,0 +1,26 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+		   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		   xmlns:c="http://camel.apache.org/schema/blueprint"
+		   xsi:schemaLocation="
+             http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
+             http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
+	
+	<c:camelContext>
+		<!-- Scanning the packages and adding all the routes found in it to the Camel Context. -->
+		<c:packageScan>
+			<c:package>com.henriqueneil.camelsamples.blueprint.route</c:package>
+		</c:packageScan>
+	</c:camelContext>
+	
+	<!-- Creating the bean in the Blueprint Context thus it can be injected in the route. -->
+	<bean id="someBean" class="com.henriqueneil.camelsamples.blueprint.bean.SomeBean" />
+	
+	<!-- JMS Component for Embedded ActiveMQ -->
+	<bean id="amq" class="org.apache.camel.component.jms.JmsComponent">
+		<property name="connectionFactory">
+			<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+				<argument value="vm://localhost:61616"/>
+			</bean>
+		</property>
+	</bean>
+</blueprint>

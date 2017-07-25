@@ -1,4 +1,4 @@
 .idea
 *.iml
-camel-spring-config/camel-client/target/classes
-camel-spring-config/camel-client/target
+**/target
+**/activemq-data

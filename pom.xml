@@ -10,6 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>camel-spring-config</module>
+		<module>camel-blueprint-config</module>
+        <module>camel-spring-xml-config</module>
     </modules>
 
     <properties>

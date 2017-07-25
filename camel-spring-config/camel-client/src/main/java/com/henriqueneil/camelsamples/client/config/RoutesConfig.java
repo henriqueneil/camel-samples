@@ -13,4 +13,5 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.henriqueneil.camelsamples.client.routes")
 public class RoutesConfig extends CamelConfiguration {
 
+
 }
