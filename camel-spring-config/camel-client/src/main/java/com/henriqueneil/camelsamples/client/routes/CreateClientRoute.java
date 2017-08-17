@@ -1,7 +1,7 @@
 package com.henriqueneil.camelsamples.client.routes;
 
 import org.apache.camel.BeanInject;
-import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.spring.SpringRouteBuilder;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
@@ -10,7 +10,7 @@ import javax.sql.DataSource;
  * @author Henrique Neil
  */
 @Component
-public class CreateClientRoute extends RouteBuilder {
+public class CreateClientRoute extends SpringRouteBuilder {
     
     @BeanInject
     private DataSource dataSource;

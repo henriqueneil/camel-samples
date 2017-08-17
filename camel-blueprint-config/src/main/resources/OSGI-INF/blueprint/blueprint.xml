@@ -13,7 +13,9 @@
 	</c:camelContext>
 	
 	<!-- Creating the bean in the Blueprint Context thus it can be injected in the route. -->
-	<bean id="someBean" class="com.henriqueneil.camelsamples.blueprint.bean.SomeBean" />
+	<bean id="someBean" class="com.henriqueneil.camelsamples.blueprint.bean.FileHandlerBean" />
+	
+	<bean id="updatePropertyProcessor" class="com.henriqueneil.camelsamples.blueprint.processor.UpdatePropertyProcessor" />
 	
 	<!-- JMS Component for Embedded ActiveMQ -->
 	<bean id="amq" class="org.apache.camel.component.jms.JmsComponent">
