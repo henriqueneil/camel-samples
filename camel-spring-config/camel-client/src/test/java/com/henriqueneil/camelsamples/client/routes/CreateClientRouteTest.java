@@ -4,10 +4,8 @@ import com.henriqueneil.camelsamples.client.config.RoutesConfig;
 import org.apache.camel.EndpointInject;
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.test.spring.CamelSpringDelegatingTestContextLoader;
-import org.apache.camel.test.spring.CamelSpringJUnit4ClassRunner;
 import org.apache.camel.test.spring.CamelSpringTestSupport;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.test.annotation.DirtiesContext;
@@ -16,7 +14,6 @@ import org.springframework.test.context.ContextConfiguration;
 /**
  * @author Henrique Neil
  */
-@RunWith(CamelSpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { RoutesConfig.class },
         loader = CamelSpringDelegatingTestContextLoader.class)
 public class CreateClientRouteTest extends CamelSpringTestSupport {
